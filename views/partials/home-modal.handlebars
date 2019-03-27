@@ -1,0 +1,119 @@
+{{!-- Employer Modal --}}
+<div class="modal fade" id="homeEmpModal" tabindex="-1" role="dialog" aria-labelledby="homeEmpLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="homeEmpLabel">Employers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="bus-name">Company Name</label>
+            <input type="text" class="form-control" id="bus-name">
+            <label for="bus-url">Company Website</label>
+            <input type="url" class="form-control" id="bus-url">
+            <label for="bus-address">Company Address</label>
+            <input type="text" class="form-control" id="bus-address">
+            <label for="bus-bio">Company Bio</label>
+            <input type="url" class="form-control" id="bus-bio">
+            <label for="bus-photo">Company Photo</label>
+            <input type="url" class="form-control" id="bus-photo">
+            <label for="busSkillOne">Select Skill</label>
+            <select class="form-control" id="busSkillOne">
+              <option>HTML5</option>
+              <option>CSS3</option>
+              <option>JavaScript</option>
+              <option>SQL</option>
+              <option>React</option>
+            </select>
+            <label for="busSkillTwo">Select Skill</label>
+            <select class="form-control" id="busSkillTwo">
+              <option>HTML5</option>
+              <option>CSS3</option>
+              <option>JavaScript</option>
+              <option>SQL</option>
+              <option>React</option>
+            </select>
+            <label for="busSkillThree">Select Skill</label>
+            <select class="form-control" id="busSkillThree">
+              <option>HTML5</option>
+              <option>CSS3</option>
+              <option>JavaScript</option>
+              <option>SQL</option>
+              <option>React</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/employers" class="btn btn-primary" id="busSubmit">Submit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Dev Modal --}}
+<div class="modal fade" id="homeDevModal" tabindex="-1" role="dialog" aria-labelledby="homeDevLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="homeDevLabel">Developers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="dev-name">Dev Name</label>
+            <input type="text" class="form-control" id="dev-name">
+            <label for="dev-photo">Dev Photo</label>
+            <input type="url" class="form-control" id="dev-photo">
+            <label for="dev-exp">Dev Experience</label>
+            <input type="number" class="form-control" id="dev-exp">
+            <label for="dev-git">Dev Github</label>
+            <input type="url" class="form-control" id="dev-git">
+            <label for="dev-linkedin">Dev LinkedIn</label>
+            <input type="url" class="form-control" id="dev-linkedin">
+            <label for="dev-portfolio">Dev Portfolio</label>
+            <input type="url" class="form-control" id="dev-portfolio">
+            <label for="dev-bio">Dev Bio</label>
+            <input type="url" class="form-control" id="dev-bio">
+            <label for="devSkillOne">Select Skill</label>
+            <select class="form-control" id="devSkillOne">
+              <option>HTML5</option>
+              <option>CSS3</option>
+              <option>JavaScript</option>
+              <option>SQL</option>
+              <option>React</option>
+            </select>
+            <label for="devSkillTwo">Select Skill</label>
+            <select class="form-control" id="devSkillTwo">
+              <option>HTML5</option>
+              <option>CSS3</option>
+              <option>JavaScript</option>
+              <option>SQL</option>
+              <option>React</option>
+            </select>
+            <label for="devSkillThree">Select Skill</label>
+            <select class="form-control" id="devSkillThree">
+              <option>HTML5</option>
+              <option>CSS3</option>
+              <option>JavaScript</option>
+              <option>SQL</option>
+              <option>React</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/developers" class="btn btn-primary" id="devSubmit">Submit</a>
+      </div>
+    </div>
+  </div>
+</div>
