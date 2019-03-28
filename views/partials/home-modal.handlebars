@@ -1,9 +1,9 @@
 {{!-- Employer Modal --}}
-<div class="modal fade" id="homeEmpModal" tabindex="-1" role="dialog" aria-labelledby="homeEmpLabel" aria-hidden="true">
+<div class="modal fade" id="empModalOne" tabindex="-1" role="dialog" aria-labelledby="empLabelOne" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="homeEmpLabel">Employers</h5>
+        <h5 class="modal-title" id="empLabelOne">Employers</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -17,10 +17,56 @@
             <input type="url" class="form-control" id="bus-url">
             <label for="bus-address">Company Address</label>
             <input type="text" class="form-control" id="bus-address">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#empModalTwo">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="empModalTwo" tabindex="-1" role="dialog" aria-labelledby="empModalLabelTwo" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="empModalLabelTwo">Employers Step 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
             <label for="bus-bio">Company Bio</label>
             <input type="url" class="form-control" id="bus-bio">
             <label for="bus-photo">Company Photo</label>
             <input type="url" class="form-control" id="bus-photo">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#empModalOne">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#empModalThree">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="empModalThree" tabindex="-1" role="dialog" aria-labelledby="empModalLabelThree" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabelThree">Employers Step 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
             <label for="busSkillOne">Select Skill</label>
             <select class="form-control" id="busSkillOne">
               <option>HTML5</option>
@@ -49,19 +95,19 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#empModalTwo">Back</button>
         <a href="/employers" class="btn btn-primary" id="busSubmit">Submit</a>
       </div>
     </div>
   </div>
 </div>
 
-{{!-- Dev Modal --}}
-<div class="modal fade" id="homeDevModal" tabindex="-1" role="dialog" aria-labelledby="homeDevLabel" aria-hidden="true">
+{{!-- Dev Modals --}}
+<div class="modal fade" id="devModalOne" tabindex="-1" role="dialog" aria-labelledby="devLabelOne" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="homeDevLabel">Developers</h5>
+        <h5 class="modal-title" id="devLabelOne">Developers</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -75,14 +121,60 @@
             <input type="url" class="form-control" id="dev-photo">
             <label for="dev-exp">Dev Experience</label>
             <input type="number" class="form-control" id="dev-exp">
+            <label for="dev-bio">Dev Bio</label>
+            <input type="url" class="form-control" id="dev-bio">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#devModalTwo">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="devModalTwo" tabindex="-1" role="dialog" aria-labelledby="devLabelTwo" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="devLabelTwo">Developers Step 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
             <label for="dev-git">Dev Github</label>
             <input type="url" class="form-control" id="dev-git">
             <label for="dev-linkedin">Dev LinkedIn</label>
             <input type="url" class="form-control" id="dev-linkedin">
             <label for="dev-portfolio">Dev Portfolio</label>
             <input type="url" class="form-control" id="dev-portfolio">
-            <label for="dev-bio">Dev Bio</label>
-            <input type="url" class="form-control" id="dev-bio">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#devModalOne">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#devModalThree">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="devModalThree" tabindex="-1" role="dialog" aria-labelledby="devLabelThree" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="devLabelThree">Developers Step 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
             <label for="devSkillOne">Select Skill</label>
             <select class="form-control" id="devSkillOne">
               <option>HTML5</option>
@@ -111,7 +203,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#devModalTwo">Back</button>
         <a href="/developers" class="btn btn-primary" id="devSubmit">Submit</a>
       </div>
     </div>

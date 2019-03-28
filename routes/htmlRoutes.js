@@ -1,4 +1,4 @@
-// var db = require('../models');
+var db = require('../models');
 
 module.exports = function(app) {
   // Load index page
@@ -7,41 +7,15 @@ module.exports = function(app) {
   });
 
   app.get('/developers', function(req, res) {
-    // db.Example.findAll({}).then(function(dbExamples) {
-    res.render('developers', {
-      // msg: 'Welcome!',
-      // examples: dbExamples,
-    });
-    // });
+    res.render('developers');
   });
 
   app.get('/employers', function(req, res) {
-    // db.Example.findAll({}).then(function(dbExamples) {
-    res.render('employers', {
-      // msg: 'Welcome!',
-      // examples: dbExamples,
-    });
-    // });
+    res.render('employers');
   });
 
   app.get('/about', function(req, res) {
-    // db.Example.findAll({}).then(function(dbExamples) {
-    res.render('about', {
-      // msg: 'Welcome!',
-      // examples: dbExamples,
-    });
-    // });
-  });
-
-  // Load example page and pass in an example by id
-  app.get('/example/:id', function(req, res) {
-    // db.Example.findOne({ where: { id: req.params.id } }).then(function(
-    //   dbExample
-    // ) {
-    // res.render('example', {
-    //   example: dbExample,
-    // });
-    // });
+    res.render('about');
   });
 
   // Render 404 page for any unmatched routes
