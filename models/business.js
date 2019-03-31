@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     skillOne: DataTypes.STRING,
     skillTwo: DataTypes.STRING,
     skillThree: DataTypes.STRING,
+    job_description: DataTypes.STRING
   });
   return Business;
 };

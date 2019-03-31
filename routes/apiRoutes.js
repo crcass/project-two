@@ -7,6 +7,12 @@ module.exports = function(app) {
     });
   });
 
+  app.post('/api/contacts', (req, res) => {
+    db.Contact.create(req.body).then(data => {
+      return res.json(data);
+    });
+  });
+
   app.post('/api/devs', (req, res) => {
     db.Devs.create(req.body).then(data => {
       return res.json(data);
