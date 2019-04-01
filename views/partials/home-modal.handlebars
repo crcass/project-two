@@ -9,26 +9,28 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form class="validate" id="empFormOne">
           <div class="form-group">
             <label for="bus-name">Company Name</label>
-            <input type="text" class="form-control" id="bus-name">
-            <label for="bus-url">Company Website</label>
-            <input type="url" class="form-control" id="bus-url">
+            <input type="text" class="form-control" id="bus-name" required>
+            <label for="bus-url">Company Website - URL</label>
+            <input type="url" class="form-control" id="bus-url" required>
             <label for="bus-address">Company Address</label>
-            <input type="text" class="form-control" id="bus-address">
+            <input type="text" class="form-control" id="bus-address" required>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#empModalTwo">Next</button>
+        <button type="button" form="empFormOne" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+          data-target="#empModalTwo" id="empNextOne">Next</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="empModalTwo" tabindex="-1" role="dialog" aria-labelledby="empModalLabelTwo" aria-hidden="true">
+<div class="modal fade" id="empModalTwo" tabindex="-1" role="dialog" aria-labelledby="empModalLabelTwo"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -38,24 +40,27 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form class="validate" id="empFormTwo">
           <div class="form-group">
             <label for="bus-bio">Company Bio</label>
-            <input type="url" class="form-control" id="bus-bio">
-            <label for="bus-photo">Company Photo</label>
-            <input type="url" class="form-control" id="bus-photo">
+            <input type="text" class="form-control" id="bus-bio" required>
+            <label for="bus-photo">Company Photo - URL</label>
+            <input type="url" class="form-control" id="bus-photo" required>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#empModalOne">Back</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#empModalThree">Next</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+          data-target="#empModalOne">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+          data-target="#empModalThree" id="empNextTwo">Next</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="empModalThree" tabindex="-1" role="dialog" aria-labelledby="empModalLabelThree" aria-hidden="true">
+<div class="modal fade" id="empModalThree" tabindex="-1" role="dialog" aria-labelledby="empModalLabelThree"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -65,10 +70,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form class="validate">
           <div class="form-group">
             <label for="busSkillOne">Select Skill</label>
-            <select class="form-control" id="busSkillOne">
+            <select class="form-control" id="busSkillOne" reqiuired>
               <option>HTML5</option>
               <option>CSS3</option>
               <option>JavaScript</option>
@@ -76,7 +81,7 @@
               <option>React</option>
             </select>
             <label for="busSkillTwo">Select Skill</label>
-            <select class="form-control" id="busSkillTwo">
+            <select class="form-control" id="busSkillTwo" required>
               <option>HTML5</option>
               <option>CSS3</option>
               <option>JavaScript</option>
@@ -84,7 +89,7 @@
               <option>React</option>
             </select>
             <label for="busSkillThree">Select Skill</label>
-            <select class="form-control" id="busSkillThree">
+            <select class="form-control" id="busSkillThree" required>
               <option>HTML5</option>
               <option>CSS3</option>
               <option>JavaScript</option>
@@ -95,7 +100,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#empModalTwo">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+          data-target="#empModalTwo">Back</button>
         <a href="/employers" class="btn btn-primary" id="busSubmit">Submit</a>
       </div>
     </div>
@@ -113,22 +119,23 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form class="validate" id="devFormOne">
           <div class="form-group">
             <label for="dev-name">Dev Name</label>
-            <input type="text" class="form-control" id="dev-name">
-            <label for="dev-photo">Dev Photo</label>
-            <input type="url" class="form-control" id="dev-photo">
+            <input type="text" class="form-control" id="dev-name" required>
+            <label for="dev-photo">Dev Photo - URL</label>
+            <input type="url" class="form-control" id="dev-photo" required>
             <label for="dev-exp">Dev Experience</label>
-            <input type="number" class="form-control" id="dev-exp">
+            <input type="number" class="form-control" id="dev-exp" required>
             <label for="dev-bio">Dev Bio</label>
-            <input type="url" class="form-control" id="dev-bio">
+            <input type="text" class="form-control" id="dev-bio" required>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#devModalTwo">Next</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+          data-target="#devModalTwo" id="devNextOne">Next</button>
       </div>
     </div>
   </div>
@@ -144,26 +151,29 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form class="validate" id="devFormTwo">
           <div class="form-group">
-            <label for="dev-git">Dev Github</label>
-            <input type="url" class="form-control" id="dev-git">
-            <label for="dev-linkedin">Dev LinkedIn</label>
-            <input type="url" class="form-control" id="dev-linkedin">
-            <label for="dev-portfolio">Dev Portfolio</label>
-            <input type="url" class="form-control" id="dev-portfolio">
+            <label for="dev-git">Dev Github - URL</label>
+            <input type="url" class="form-control" id="dev-git" required>
+            <label for="dev-linkedin">Dev LinkedIn - URL</label>
+            <input type="url" class="form-control" id="dev-linkedin" required>
+            <label for="dev-portfolio">Dev Portfolio - URL</label>
+            <input type="url" class="form-control" id="dev-portfolio" required>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#devModalOne">Back</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#devModalThree">Next</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+          data-target="#devModalOne">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+          data-target="#devModalThree" id="devNextTwo">Next</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="devModalThree" tabindex="-1" role="dialog" aria-labelledby="devLabelThree" aria-hidden="true">
+<div class="modal fade" id="devModalThree" tabindex="-1" role="dialog" aria-labelledby="devLabelThree"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -173,10 +183,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form class="validate">
           <div class="form-group">
             <label for="devSkillOne">Select Skill</label>
-            <select class="form-control" id="devSkillOne">
+            <select class="form-control" id="devSkillOne" required>
               <option>HTML5</option>
               <option>CSS3</option>
               <option>JavaScript</option>
@@ -184,7 +194,7 @@
               <option>React</option>
             </select>
             <label for="devSkillTwo">Select Skill</label>
-            <select class="form-control" id="devSkillTwo">
+            <select class="form-control" id="devSkillTwo" required>
               <option>HTML5</option>
               <option>CSS3</option>
               <option>JavaScript</option>
@@ -192,7 +202,7 @@
               <option>React</option>
             </select>
             <label for="devSkillThree">Select Skill</label>
-            <select class="form-control" id="devSkillThree">
+            <select class="form-control" id="devSkillThree" required>
               <option>HTML5</option>
               <option>CSS3</option>
               <option>JavaScript</option>
@@ -203,7 +213,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#devModalTwo">Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+          data-target="#devModalTwo">Back</button>
         <a href="/developers" class="btn btn-primary" id="devSubmit">Submit</a>
       </div>
     </div>
