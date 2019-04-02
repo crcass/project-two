@@ -75,3 +75,56 @@ devSubmit.onclick = () => {
   devSkillTwo.value = '';
   devSkillThree.value = '';
 };
+
+$(document).ready(function() {
+  // Our new todos will go inside the todoContainer
+  var $contactContainer = $(".contact-container");
+  // Adding event listeners for deleting, editing, and adding todos
+  $(document).on("click", "button.delete", deleteMessage);
+  $(document).on("click", "button.complete", toggleComplete);
+
+  // Our initial todos array
+  var contact = [];
+
+  // Getting todos from database when page loads
+  getContacts();
+
+  // This function resets the todos displayed with new todos from the database
+  function initializeRows() {
+    $contactContainer.empty();
+    var rowsToAdd = [];
+    for (var i = 0; i < contact.length; i++) {
+      rowsToAdd.push(createNewRow(contact[i]));
+    }
+    $todoContainer.prepend(rowsToAdd);
+  }
+
+  // This function grabs todos from the database and updates the view
+  function getContacts() {
+    $.get("/api/contacts", function(data) {
+      contact = data;
+      initializeRows();
+    });
+  }
+
+  // This function deletes a todo when the user clicks the delete button
+  function deleteMessage(event) {
+    event.stopPropagation();
+    var id = $(this).data("id");
+    $.ajax({
+      method: "DELETE",
+      url: "/api/contacts/" + id
+    }).then(getContacts);
+  }
+
+
+  // Toggles complete status
+  function toggleComplete(event) {
+    event.stopPropagation();
+    var contact = $(this).parent().data("contact");
+    contact.complete = !contact.complete;
+    updateTodo(contact);
+  }
+
+
+});

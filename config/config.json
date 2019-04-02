@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "judyred5",
+    "password": "",
     "database": "devpool_db",
     "host": "localhost",
     "dialect": "mysql"
