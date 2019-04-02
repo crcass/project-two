@@ -8,8 +8,8 @@
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "d0ntsayThat!",
+    "database": "devpool_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false

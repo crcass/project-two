@@ -4,8 +4,8 @@ const devSubmit = document.getElementById('devSubmit');
 busSubmit.onclick = () => {
   const busName = document.getElementById('bus-name');
   const busUrl = document.getElementById('bus-url');
-  const busPhoto = document.getElementById('bus-photo');
   const busAddress = document.getElementById('bus-address');
+  const busPhoto = document.getElementById('bus-photo');
   const busBio = document.getElementById('bus-bio');
   const busSkillOne = document.getElementById('busSkillOne');
   const busSkillTwo = document.getElementById('busSkillTwo');
