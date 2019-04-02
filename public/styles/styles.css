@@ -1,3 +1,15 @@
-.list-group-item {
-  line-height: 2.5;
+html, body {
+  height: 100%;
+}
+
+/* Homepage */
+.home-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.home-row {
+  width: 100%;
+  margin: 0 auto;
 }
