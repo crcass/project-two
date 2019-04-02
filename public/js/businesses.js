@@ -26,3 +26,5 @@ $(function() {
     }
   });
 });
+
+document.title = 'For Developers';
