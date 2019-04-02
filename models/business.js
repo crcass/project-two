@@ -4,12 +4,11 @@ module.exports = (sequelize, DataTypes) => {
     address: DataTypes.STRING,
     website: DataTypes.STRING,
     photo: DataTypes.STRING,
-    address: DataTypes.STRING,
     bio: DataTypes.STRING,
     skillOne: DataTypes.STRING,
     skillTwo: DataTypes.STRING,
     skillThree: DataTypes.STRING,
-    job_description: DataTypes.STRING
+    jobDescription: DataTypes.STRING,
   });
   return Business;
 };

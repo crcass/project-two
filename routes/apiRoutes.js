@@ -18,4 +18,10 @@ module.exports = function(app) {
       return res.json(data);
     });
   });
+
+  app.get('/api/businesses', (req, res) => {
+    db.Businesses.findAll({}).then(data => {
+      return res.json(data);
+    });
+  });
 };

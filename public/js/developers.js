@@ -1,3 +1,4 @@
+// Aimes
 $(function() {
   $('.businessButton').on('click', function() {
     console.log(123);
@@ -8,6 +9,16 @@ $(function() {
   $('.btn-primary').on('click', function(err) {
     var message = $('#devNote').val();
     if (message) {
+      var Contacts = {
+        company: $(this).attr('data-name'),
+        message: message,
+      };
+
+      $.post('/api/contacts', Contacts).then(function() {
+        location.reload();
+        console.log('added to contact table');
+      });
+
       console.log(message);
     } else {
       throw err;
