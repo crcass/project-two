@@ -1,12 +1,13 @@
 {{!-- Vince --}}
 {{#this}}
-<div class="card text-center" style="width: 18rem;">
-  <img src="{{photo}}" class="card-img-top" alt="...">
+<div class="card text-center profile-card mb-3 shadow-wrap">
+  <div class="img-container mt-3">
+    <img src="{{photo}}" class="card-img-top" alt="{{name}}">
+  </div>
   <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
+    <h5 class="card-title" id="companyName">{{name}}</h5>
     <p class="card-text">{{bio}}</p>
-    <a href={{website}}>{{website}}</a>
-    <p class="address">{{address}}</p>
+    <a href={{website}} class="btn btn-primary" target="_blank" rel="noopener noreferrer">{{name}}</a>
   </div>
 </div>
 {{/this}}

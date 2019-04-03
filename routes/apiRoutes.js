@@ -25,13 +25,13 @@ module.exports = function(app) {
     });
   });
 
-  app.post('/api/contact', (req, res) => {
+  app.post('/api/contacts', (req, res) => {
     db.Contacts.create(req.body).then(data => {
       return res.json(data);
     });
   });
 
-  app.get('/api/contact', (req, res) => {
+  app.get('/api/contacts', (req, res) => {
     db.Contacts.findAll({}).then(data => {
       return res.json(data);
     });

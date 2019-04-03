@@ -1,0 +1,81 @@
+{{!-- Adrian --}}
+<div class="card shadow-wrap">
+  <div class="card-header">
+    Top Matches
+  </div>
+  <div class="card-body contact-card">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Top Skills</th>
+          <th scope="col">Profile</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each Contact}}
+        <tr>
+          <td scope="row">{{dataValues.Dev.dataValues.name}}</td>
+          <td>{{dataValues.Dev.dataValues.skillOne}}, {{dataValues.Dev.dataValues.skillTwo}},
+            {{dataValues.Dev.dataValues.skillThree}}</td>
+          <td>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+              data-target="#contactModal{{dataValues.Dev.dataValues.id}}">
+              View
+            </button>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{{#each Contact}}
+<div class="modal fade" id="contactModal{{dataValues.Dev.dataValues.id}}" tabindex="-1" role="dialog"
+  aria-labelledby="contactModalLabel{{dataValues.Dev.dataValues.id}}" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{dataValues.Dev.dataValues.name}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card text-center">
+          <img src="{{dataValues.Dev.dataValues.photo}}" class=" card-img-top" alt="{{name}}">
+          <div class="card-body">
+            <p class="card-text">{{dataValues.Dev.dataValues.bio}}</p>
+            <p>{{dataValues.Dev.dataValues.yearsExp}} Years Experience</p>
+            <p class="skillOne">Top Skills: {{dataValues.Dev.dataValues.skillOne}},
+              {{dataValues.Dev.dataValues.skillTwo}}, {{dataValues.Dev.dataValues.skillThree}}
+            </p>
+            <a href="{{dataValues.Dev.dataValues.github}}" target="_blank" ref="noopener noreferrer"><i
+                class="fab fa-github"></i></a>
+            <a href="{{dataValues.Dev.dataValues.linkedin}}" target="_blank" ref="noopener noreferrer"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="{{dataValues.Dev.dataValues.portfolio}}" target="_blank" ref="noopener noreferrer"><i
+                class="fas fa-portrait"></i></a>
+          </div>
+        </div>
+        <hr>
+        <div class="form-group">
+          <h5>Message Developer</h5>
+          <label for="msgSubject">Subject:</label>
+          <input class="form-control" type="text" id="msgSubject">
+          <label for="devNote">Message:</label>
+          <textarea class="form-control" id="devNote" rows="3"></textarea>
+          <label for="jobUrl">Job Posting URL:</label>
+          <input class="form-control" type="url" id="jobUrl">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id='sendInterest' class="btn btn-primary" data-dev='{{dataValues.id}}'>Send</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}

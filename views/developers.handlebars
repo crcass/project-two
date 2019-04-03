@@ -1,16 +1,35 @@
-{{> header}}
-
-{{!-- Vince --}}
-{{> profile developers}}
-
-{{!-- Aimes --}}
-<div class='container' id='jobResultsHolder'>
-  <h1>Jobs Results:</h1>
-  <ul>
-    {{#each Businesses}}
-    {{> business-block }}
-    {{/each}}
-  </ul>
+<div class="layout-bg">
+  <div class="layout-wrap">
+    {{> header}}
+    <div class="row container-fluid layout-container">
+      <div class="col-sm-3">
+        {{!-- Vince --}}
+        {{> profile developers}}
+        {{!-- Adrian --}}
+        {{> contact}}
+      </div>
+      {{!-- Aimes --}}
+      <div class='col-sm-9' id='jobResultsHolder'>
+        <h1>Jobs Results:</h1>
+        <div class="table-wrap rounded shadow-wrap">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Company</th>
+                <th scope="col">Top Skills</th>
+                <th scope="col">More Info</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each Businesses}}
+              {{> business-block }}
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
