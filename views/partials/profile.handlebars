@@ -1,13 +1,16 @@
+{{!-- Vince --}}
 {{#this}}
-<div class="card text-center" style="width: 18rem;">
-  <img src="{{photo}}" class="card-img-top" alt="...">
+<div class="card text-center profile-card mb-3 shadow-wrap">
+  <div class="img-container mt-3">
+    <img src="{{photo}}" class="card-img-top" alt="{{name}}">
+  </div>
   <div class="card-body">
     <h5 class="card-title">{{name}}</h5>
     <p class="card-text">{{bio}}</p>
-    <p class="skillOne">{{skillOne}}, {{skillTwo}}, {{skillThree}}</p>
-    <a href="{{github}}" target="_blank" ref="noopener noreferrer"><i class="fab fa-github"></i></a>
-    <a href="{{linkedin}}" target="_blank" ref="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-    <a href="{{portfolio}}" target="_blank" ref="noopener noreferrer"><i class="fas fa-portrait"></i></a>
+    <p class="topSkills">Top Skills: {{skillOne}}, {{skillTwo}}, {{skillThree}}</p>
+    <a href="{{github}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+    <a href="{{linkedin}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+    <a href="{{portfolio}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-portrait"></i></a>
   </div>
 </div>
 {{/this}}

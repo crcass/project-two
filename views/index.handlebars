@@ -1,35 +1,36 @@
 {{!-- Chris --}}
-
-{{> header}}
-
-
-<div class="container home-container">
-  <div class="row justify-content-center align-middle home-row">
-    <div class="card m-3" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">For Employers</h5>
-        <p class="card-text">Employers click this button to do stuff</p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#empModalOne">
-          Click
-        </button>
+<div class="main-bg">
+  <div class="main-wrap">
+    {{> header}}
+    <div class="container home-container">
+      <div class="row justify-content-center align-middle home-row">
+        <div class="card m-3" style="width: 18rem;">
+          <img src="/images/recruiter.jpg" class="card-img-top" alt="Recruiter">
+          <div class="card-body">
+            <h5 class="card-title">For Employers</h5>
+            <p class="card-text">Find the best candidates, guaranteed</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#empLaunchModal">
+              Click
+            </button>
+          </div>
+        </div>
+        <div class="card m-3" style="width: 18rem;">
+          <img src="/images/dev.jpg" class="card-img-top" alt="Developer">
+          <div class="card-body">
+            <h5 class="card-title">For Developers</h5>
+            <p class="card-text">Connect with recruiters looking for your skillset</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#devLaunchModal">
+              Click
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card m-3" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">For Developers</h5>
-        <p class="card-text">Devs click this button to do stuff</p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#devModalOne">
-          Click
-        </button>
-      </div>
-    </div>
+
+    {{> home-modal}}
+
   </div>
 </div>
-
-{{> home-modal}}
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

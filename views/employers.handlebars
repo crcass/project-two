@@ -1,16 +1,35 @@
-{{> header}}
-
-{{!-- Vince --}}
-{{> profileBus businesses}}
-
-{{!-- Aimes --}}
-<div class='container' id='jobResultsHolder'>
-  <h1>Developers Interested:</h1>
-  <ul>
-    {{#each Devs}}
-    {{> dev-block }}
-    {{/each}}
-  </ul>
+<div class="layout-bg">
+  <div class="layout-wrap">
+    {{> header}}
+    <div class="row container-fluid layout-container">
+      <div class="col-sm-3">
+        {{!-- Vince --}}
+        {{> profileBus businesses}}
+        {{!-- Adrian --}}
+        {{> contactBus}}
+      </div>
+      {{!-- Aimes --}}
+      <div class='col-sm-9' id='devResultsHolder'>
+        <h1>Available Developers:</h1>
+        <div class="table-wrap rounded shadow-wrap">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Top Skills</th>
+                <th scope="col">More Info</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each Devs}}
+              {{> dev-block }}
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -20,3 +39,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="/js/developers.js"></script>
+<script src="/js/contactDev.js"></script>

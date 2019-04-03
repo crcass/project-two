@@ -1,1 +1,1 @@
-document.title = 'About Us';
+document.title = 'DevPool | About Us';
