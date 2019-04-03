@@ -25,3 +25,5 @@ $(function() {
     }
   });
 });
+
+document.title = 'For Employers';

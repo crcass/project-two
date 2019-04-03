@@ -6,35 +6,35 @@ module.exports = function(app) {
     res.render('index');
   });
 
-  app.get('/developers', function(req, res) {
-    db.Businesses.findAll({}).then(function(data) {
-      var hbsObject = {
-        Businesses: data,
-      };
-      res.render('developers', hbsObject);
-    });
-  });
-
   app.get('/developers/:id', function(req, res) {
-    db.Devs.findOne({
-      attributes: [
-        'name',
-        'photo',
-        'yearsExp',
-        'github',
-        'linkedin',
-        'portfolio',
-        'bio',
-        'skillOne',
-        'skillTwo',
-        'skillThree',
-      ],
-      where: { id: req.params.id },
-    }).then(function(devs) {
-      res.render('developers', {
-        developers: devs,
-      });
-    });
+    var hbsObject = {
+      Businesses: null,
+      developers: null,
+    };
+    db.Businesses.findAll({}).then(
+      function(data) {
+        hbsObject.Businesses = data;
+      },
+      db.Devs.findOne({
+        attributes: [
+          'name',
+          'photo',
+          'yearsExp',
+          'github',
+          'linkedin',
+          'portfolio',
+          'bio',
+          'skillOne',
+          'skillTwo',
+          'skillThree',
+        ],
+        where: { id: req.params.id },
+      }).then(function(devs) {
+        hbsObject.developers = devs;
+
+        res.render('developers', hbsObject);
+      })
+    );
   });
 
   app.get('/employers', function(req, res) {
