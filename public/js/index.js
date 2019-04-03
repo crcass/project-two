@@ -23,7 +23,7 @@ busSubmit.onclick = () => {
   };
 
   $.post('/api/businesses', newBus).then(data => {
-    console.log(data);
+    window.location.href = `/employers/${data.id}`;
   });
 
   busName.value = '';
@@ -61,7 +61,7 @@ devSubmit.onclick = () => {
   };
 
   $.post('/api/devs', newDev).then(data => {
-    console.log(data);
+    window.location.href = `/developers/${data.id}`;
   });
 
   devName.value = '';
