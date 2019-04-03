@@ -1,16 +1,14 @@
 // Aimes
 $(function() {
   $('.businessButton').on('click', function() {
-    console.log(123);
     var contentId = $(this).attr('data-id');
     $('#exampleModal-' + contentId).modal('show');
   });
 
-  $('.btn-primary').on('click', function(err) {
+  $('#sendInterest').on('click', function(err) {
     var value = $('.form-check-input:checked').val();
     if (value === 'true') {
       value = 1;
-      console.log(value);
 
       var Contacts = {
         company: $(this).attr('data-name'),
@@ -19,7 +17,6 @@ $(function() {
 
       $.post('/api/contacts', Contacts).then(function() {
         location.reload();
-        console.log('added to contact table');
       });
     } else {
       throw err;
@@ -27,4 +24,4 @@ $(function() {
   });
 });
 
-document.title = 'For Developers';
+document.title = 'DevPool | For Developers';

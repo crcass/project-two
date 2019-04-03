@@ -1,5 +1,48 @@
 {{!-- Chris --}}
-{{!-- Employer Modal --}}
+{{!-- Employer Modals --}}
+<div class="modal fade" id="empLaunchModal" tabindex="-1" role="dialog" aria-labelledby="empLaunch" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="empLaunch">Employers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex">
+        <form class="px-3 border-right">
+          <div class="form-group">
+            <h5>Returning Members</h5>
+            <label for="returningEmpEmail">Email address</label>
+            <input type="email" class="form-control" id="returningEmpEmail">
+            <label for="returningEmpPassword">Password</label>
+            <input type="password" class="form-control" id="returningEmpPassword">
+          </div>
+          <a href="/employers/1" class="btn btn-primary">
+            Sign In
+          </a>
+        </form>
+        <form class="px-3">
+          <div class="form-group">
+            <h5>New Here?</h5>
+            <label for="newEmpEmail">Email address</label>
+            <input type="email" class="form-control" id="newEmpEmail">
+            <label for="newEmpPassword">Password</label>
+            <input type="password" class="form-control" id="newEmpPassword">
+          </div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#empModalOne"
+            data-dismiss="modal">
+            Sign Up
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="empModalOne" tabindex="-1" role="dialog" aria-labelledby="empLabelOne" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -110,6 +153,49 @@
 </div>
 
 {{!-- Dev Modals --}}
+<div class="modal fade" id="devLaunchModal" tabindex="-1" role="dialog" aria-labelledby="devLaunch" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="devLaunch">Developers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex">
+        <form class="px-3 border-right">
+          <div class="form-group">
+            <h5>Returning Members</h5>
+            <label for="returningDevEmail">Email address</label>
+            <input type="email" class="form-control" id="returningDevEmail">
+            <label for="returningDevPassword">Password</label>
+            <input type="password" class="form-control" id="returningDevPassword">
+          </div>
+          <a href="/developers/1" class="btn btn-primary">
+            Sign In
+          </a>
+        </form>
+        <form class="px-3">
+          <div class="form-group">
+            <h5>New Here?</h5>
+            <label for="newDevEmail">Email address</label>
+            <input type="email" class="form-control" id="newDevEmail">
+            <label for="newDevPassword">Password</label>
+            <input type="password" class="form-control" id="newDevPassword">
+          </div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#devModalOne"
+            data-dismiss="modal">
+            Sign Up
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="devModalOne" tabindex="-1" role="dialog" aria-labelledby="devLabelOne" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
