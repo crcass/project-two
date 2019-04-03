@@ -17,6 +17,7 @@ module.exports = app => {
       },
       db.Devs.findOne({
         attributes: [
+          'id',
           'name',
           'photo',
           'yearsExp',
