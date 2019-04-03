@@ -1,29 +1,94 @@
-var db = require("../models");
+const db = require('../models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
-module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+module.exports = app => {
+  app.get('/', (req, res) => res.render('index'));
+
+  app.get('/developers/:id', (req, res) => {
+    let hbsObject = {
+      Businesses: null,
+      developers: null,
+      Contact: null,
+    };
+    db.Businesses.findAll({}).then(
+      data => {
+        hbsObject.Businesses = data;
+      },
+      db.Devs.findOne({
+        attributes: [
+          'name',
+          'photo',
+          'yearsExp',
+          'github',
+          'linkedin',
+          'portfolio',
+          'bio',
+          'skillOne',
+          'skillTwo',
+          'skillThree',
+        ],
+        where: { id: req.params.id },
+      }).then(
+        devs => {
+          hbsObject.developers = devs;
+        },
+        db.Contacts.findAll({
+          where: {
+            devId: req.params.id,
+            message: {
+              [Op.ne]: null,
+            },
+          },
+        }).then(msg => {
+          hbsObject.Contact = msg;
+          res.render('developers', hbsObject);
+        })
+      )
+    );
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  app.get('/employers/:id', (req, res) => {
+    let hbsObject = {
+      Devs: null,
+      businesses: null,
+      Contact: null,
+    };
+    db.Devs.findAll({}).then(
+      data => {
+        hbsObject.Devs = data;
+      },
+      db.Businesses.findOne({
+        attributes: [
+          'name',
+          'skillOne',
+          'skillTwo',
+          'skillThree',
+          'website',
+          'photo',
+          'bio',
+          'jobDescription',
+        ],
+        where: { id: req.params.id },
+      }).then(
+        businesses => {
+          hbsObject.businesses = businesses;
+        },
+        db.Contacts.findAll({
+          include: [{ model: db.Devs }],
+          where: {
+            id: req.params.id,
+            interested: 1,
+          },
+        }).then(msg => {
+          hbsObject.Contact = msg;
+          res.render('employers', hbsObject);
+        })
+      )
+    );
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+  app.get('/about', (req, res) => res.render('about'));
+
+  app.get('*', (req, res) => res.render('404'));
 };

@@ -1,0 +1,77 @@
+.layout-bg {
+  background-image: linear-gradient(
+    rgba(251, 194, 235, 0.8),
+    rgba(166, 193, 238, 0.5)
+  );
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .layout-wrap {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.layout-container {
+  margin-top: 5em;
+}
+
+.shadow-wrap {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  background-color: #aea0f7;
+  border-color: #aea0f7;
+
+  &:hover {
+    background-color: #ad86e0;
+    border-color: #ad86e0;
+  }
+
+  &:not(:disabled):not(.disabled):active {
+    background-color: #dd96fc;
+    border-color: #dd96fc;
+    outline-color: #8690e0;
+  }
+
+  &:focus {
+    outline-color: #8690e0;
+  }
+}
+
+.profile-card {
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    max-width: 160px;
+  }
+}
+
+i {
+  font-size: 2em;
+  margin: 0 0.5em;
+}
+
+.contact-card {
+  font-size: 0.75em;
+  height: 13em;
+  overflow: scroll;
+}
+
+.table-wrap {
+  max-height: 33.5em;
+  overflow: scroll;
+}
+table {
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 0;
+}
